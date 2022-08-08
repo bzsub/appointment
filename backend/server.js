@@ -4,7 +4,7 @@ const app = require('./app')
 const port = process.env.PORT
 
 mongoose
-    .connect(process.env.MONGO)
+    .connect(process.env.CONNECTION_STRING)
     .then(() => {
         app.listen(port, () => {
           console.log(`Example app listening on port ${port}`)
